@@ -20,11 +20,11 @@ public class ProdutoControllers {
     // Cria um construtor para produtocontrollers
 
     public ProdutoControllers(){
-        produtos.add(new Produto(1,"Notebook" , 3500));
+        produtos.add(new Produto(1, "Notebook", 10, 3500));
 
-        produtos.add(new Produto(2, "Mouse", 100));
+        produtos.add(new Produto(2, "Mouse", 20, 100));
 
-        produtos.add(new Produto(3, "Teclado", 250));
+        produtos.add(new Produto(3, "Teclado", 15, 250));
 
     }
 
@@ -81,6 +81,7 @@ public class ProdutoControllers {
         if(produto.getId() == id){
             produto.setNome(produtoatualizado.getNome());
             produto.setPreco(produtoatualizado.getPreco());
+            produto.setQuantidade(produtoatualizado.getQuantidade());
             return produto;
         }
     }
